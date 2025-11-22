@@ -1,2 +1,39 @@
-csiro-biomass/
+# Allow folders
+!*/
+
+# Allow ONLY the crptk source folder
+!crptk/
+!crptk/*
+
+crptk/lightning_logs/
+crptk/logs/
+crptk/cached_data/
+crptk/__pycache__/
+
+# If you store CV folds inside crptk, ignore them too:
+crptk/cv_folds/
+crptk/cv-folds/
+
 venv/
+.env/
+*.pyc
+__pycache__/
+*.pkl
+*.npy
+*.pt
+*.ckpt
+*.pth
+
+csiro-biomass/
+cv_folds/
+outputs/
+submission.csv
+
+# Any .rar / .zip archives
+*.zip
+*.rar
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+lightning_logs/
