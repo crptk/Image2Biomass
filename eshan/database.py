@@ -12,7 +12,7 @@ class ImageBiomassDataset(Dataset):
         "Dry_Green_g",
         "Dry_Dead_g",
         "Dry_Clover_g",
-        "GDM",
+        "GDM_g",
         "Dry_Total_g"
     ]
 

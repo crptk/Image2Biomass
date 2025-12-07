@@ -7,9 +7,15 @@ from torch.utils.data import random_split, DataLoader
 from lightning.pytorch.loggers import CSVLogger
 from lightning import Trainer
 import torchvision.transforms as transforms
-from lightning.pytorch.callbacks import EarlyStopping, LearningRateMonitor
+from lightning.pytorch.callbacks import (
+    EarlyStopping, LearningRateMonitor, ModelCheckpoint
+)
 
 def main():
+
+    # CHECKPOINT DIRECTORY
+    checkpoint_dir = "csiro-biomass/checkpoints"
+    os.makedirs(checkpoint_dir, exist_ok=True)
 
     # LOAD DATA
     df_train = pd.read_csv("csiro-biomass/train.csv")
@@ -58,12 +64,21 @@ def main():
 
     lr_monitor = LearningRateMonitor(logging_interval='epoch')
 
+    # CHECKPOINT SAVING
+    checkpoint_callback = ModelCheckpoint(
+        dirpath=checkpoint_dir,           
+        filename="best",                   
+        save_top_k=1,                      
+        monitor="val_loss",                
+        mode="min"
+    )
+
     trainer = Trainer(
         logger=logger,
         max_epochs=5,
         accelerator='auto',
         log_every_n_steps=1,
-        callbacks=[early_stop, lr_monitor]
+        callbacks=[early_stop, lr_monitor, checkpoint_callback]
     )
 
     # TRAIN
