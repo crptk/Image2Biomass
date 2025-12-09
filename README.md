@@ -65,8 +65,8 @@ Solution:
 
 * Resize images to 224×224
 * Apply aggressive data augmentation (flips, rotations, jitter)
-* Use **ResNet18** pretrained on ImageNet as a feature extractor
-* Build a custom **MLP regression head**
+* Use ResNet18 pretrained on ImageNet as a feature extractor
+* Build a custom MLP regression head
 * Train and evaluate multiple model variations internally
 * Select the best-performing solution for final presentation
 
@@ -78,7 +78,7 @@ The winning model (“Presstek”) uses:
 
 ### **Backbone**
 
-* **ResNet18 pretrained** on ImageNet
+* ResNet18 pretrained on ImageNet
 * First layers extract edges/textures
 * Residual blocks expand features from 64 → 128 → 256 → 512
 * Global average pooling to produce a 512-dimensional feature vector
@@ -113,7 +113,7 @@ The `OTHER SUBMISSIONS/` folder contains individual experimental models by:
 * **Edrees (crptk)**
 * **Eshan**
 
-These were part of a competition-style workflow to see who could produce the best Kaggle score.
+These were part of our competition-style workflow to see who could produce the best Kaggle score (while helping each other out).
 The best-performing model became the “official” version.
 
 ---
@@ -152,7 +152,7 @@ Some improvements we identified:
 * Use regression-friendly loss functions (Huber, L1+L2 combos)
 * Try Mixup/CutMix for synthetic image generation
 * Hyperparameter tuning (learning rate, batch size)
-* Collect more real data
+* Collect more real data if possible
 
 ---
 
