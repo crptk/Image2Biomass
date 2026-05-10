@@ -6,9 +6,6 @@ Due to the very small dataset (357 training images), this project focuses heavil
 We approached this project as a friendly internal challenge:
 Each of us built our own model from scratch, and whoever achieved the best Kaggle score would have their model chosen as the “official” one for our presentation and final video.
 
-**Winner:** **Adrian Ramirez**, achieving a score of ~0.30
-His model is documented in the Official model folder.
-
 ---
 
 # **Repository Structure**
@@ -139,11 +136,3 @@ Some improvements we identified:
 * Try Mixup/CutMix for synthetic image generation
 * Hyperparameter tuning (learning rate, batch size)
 * Collect more real data if possible
-
----
-
-# **Team Members**
-
-* **Adrian Ramirez** (official model)
-* **Edrees Amiri**
-* **Eshan**
