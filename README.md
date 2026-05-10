@@ -93,7 +93,6 @@ The winning model (“Presstek”) uses:
 
 The `OTHER SUBMISSIONS/` folder contains individual experimental models by:
 
-* **Edrees (crptk)**
 * **Eshan**
 
 These were part of our competition-style workflow to see who could produce the best Kaggle score (while helping each other out).
