@@ -11,20 +11,6 @@ His model is documented in the Official model folder.
 
 ---
 
-# **Final Presentation Video**
-
-**YouTube Video:** [https://youtu.be/ggFitAc4BQs](https://youtu.be/ggFitAc4BQs)
-
-The video explains:
-
-* the Image2Biomass problem
-* our model architecture
-* training and deployment workflow
-* experiments and results
-* and our reflections on improving the model
-
----
-
 # **Repository Structure**
 
 ```
